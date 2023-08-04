@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:weather_project/firabase/Authhelper.dart';
+
 import 'package:weather_project/utils/Approuat.dart';
 import 'package:weather_project/utils/colors.dart';
 import 'package:weather_project/view/screens/onbordingcontant.dart';
@@ -84,7 +84,7 @@ class _OnbordingState extends State<Onbording> {
                                 ),
                               ],
                             ),
-                            SizedBox(
+                          const  SizedBox(
                               height: 20,
                             ),
                             Text(
@@ -112,7 +112,7 @@ class _OnbordingState extends State<Onbording> {
                                     Navigator.pushNamed(
                                         context, AppRouat.login);
                                   },
-                                  child: Text('Skip')),
+                                  child: const Text('Skip')),
                               Padding(
                                 padding: const EdgeInsets.only(left: 200.0),
                                 child: Row(
@@ -171,7 +171,7 @@ class _OnbordingState extends State<Onbording> {
         borderRadius: BorderRadius.circular(20),
         gradient: LinearGradient(colors: [
           HexColore.fromHex('#00539cff'),
-          Color(0xFF2661FA),
+        const  Color(0xFF2661FA),
           HexColore.fromHex('#EEA47FFF'),
         ]),
       ),

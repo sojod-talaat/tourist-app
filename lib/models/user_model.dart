@@ -13,7 +13,6 @@ class usermodel {
   usermodel.fromMap(Map<String, dynamic> map) {
     email = map['email'];
     name = map['name'];
-
     id = map['id'];
     phone = map['phone'];
   }

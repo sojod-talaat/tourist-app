@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:staggered_grid_view_flutter/widgets/staggered_grid_view.dart';
 import 'package:staggered_grid_view_flutter/widgets/staggered_tile.dart';
-import 'package:weather_project/models/categories.dart';
+import 'package:weather_project/models/places_model.dart';
 import 'package:weather_project/providers/weather_provider.dart';
 import 'package:weather_project/utils/colors.dart';
 import 'package:weather_project/view/screens/detail_screen.dart';

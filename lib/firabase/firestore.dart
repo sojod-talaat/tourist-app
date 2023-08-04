@@ -1,6 +1,6 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:weather_project/firabase/Authhelper.dart';
-import 'package:weather_project/models/categories.dart';
+import 'package:weather_project/models/places_model.dart';
 import 'package:weather_project/models/user_model.dart';
 
 class FireStoreHelper {
@@ -62,7 +62,7 @@ class FireStoreHelper {
             .get();
     documentSnapshot.data();
     usermodel currentuser = usermodel.fromMap(documentSnapshot.data()!);
-    print(currentuser.email);
+
     return currentuser;
   }
 

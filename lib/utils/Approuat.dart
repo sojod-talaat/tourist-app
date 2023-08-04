@@ -39,7 +39,6 @@ class AppRouat {
         return MaterialPageRoute(builder: (_) => const CalendarScreen());
       case tourist:
         return MaterialPageRoute(builder: (_) => TouristScreen());
-
       case profile2:
         return MaterialPageRoute(builder: (_) => const Profile());
     }

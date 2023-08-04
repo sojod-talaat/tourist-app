@@ -23,9 +23,6 @@ class _CalendarScreenState extends State<CalendarScreen> {
   Widget build(BuildContext context) {
     return Consumer<WeatherProvider>(
       builder: (context, value, child) => Scaffold(
-        floatingActionButton: FloatingActionButton(onPressed: () {
-          FireStoreHelper.fireStoreHelper.getUserFromFireStore();
-        }),
         bottomNavigationBar: const BottomNav(),
         body: Column(
           children: [
@@ -79,9 +76,9 @@ class _CalendarScreenState extends State<CalendarScreen> {
             Expanded(
               child: Container(
                   height: 200,
-                  decoration: BoxDecoration(
+                  decoration: const BoxDecoration(
                       //color: Colors.grey[300],
-                      borderRadius: const BorderRadius.only(
+                      borderRadius: BorderRadius.only(
                     topRight: Radius.circular(90),
                   )),
                   child: ListView.builder(
@@ -89,9 +86,6 @@ class _CalendarScreenState extends State<CalendarScreen> {
                       padding: const EdgeInsets.all(10),
                       itemCount: value.news!.articles!.length,
                       itemBuilder: (context, index) {
-                        // var article = value.news![index];
-                        // var formattedTime = DateFormat('dd MMM - HH:mm')
-                        //     .format(value.news!.articles![index].publishedAt!);
                         return InkWell(
                             onTap: () {
                               // ignore: deprecated_member_use
@@ -149,10 +143,10 @@ class _CalendarScreenState extends State<CalendarScreen> {
                                           value.news!.articles![index]
                                               .publishedAt
                                               .toString(),
-                                          style:
-                                              TextStyle(color: Colors.blueGrey),
+                                          style: const TextStyle(
+                                              color: Colors.blueGrey),
                                         ),
-                                        Divider(),
+                                        const Divider(),
                                       ],
                                     ),
                                   ),
@@ -174,9 +168,6 @@ class daily extends StatelessWidget {
 // Color(0xffABCFF2), Color(0xff9AC6F3)
   @override
   Widget build(BuildContext context) {
-    // final Shader linearGradient = const LinearGradient(
-    //   colors: <Color>[],
-    // ).createShader(const Rect.fromLTWH(0.0, 0.0, 200.0, 70.0));
     return Consumer<WeatherProvider>(
       builder: (context, value, child) => Container(
         width: double.infinity,
@@ -188,10 +179,10 @@ class daily extends StatelessWidget {
               HexColore.fromHex('#EEA47FFF'),
             ]),
             borderRadius: BorderRadius.circular(15),
-            boxShadow: [
+            boxShadow: const [
               BoxShadow(
                 color: Colors.white,
-                offset: const Offset(0, 25),
+                offset: Offset(0, 25),
                 blurRadius: 10,
                 spreadRadius: -12,
               )
@@ -212,12 +203,12 @@ class daily extends StatelessWidget {
               left: 20,
               child: Row(
                 children: [
-                  Icon(
+                  const Icon(
                     Icons.location_on_outlined,
                     color: Colors.white,
                   ),
                   Text(
-                    value.dailyWeather.cityName.toString() + ' City',
+                    '${value.dailyWeather.cityName} City',
                     style: const TextStyle(
                       color: Colors.white,
                       fontSize: 17,
@@ -231,9 +222,9 @@ class daily extends StatelessWidget {
               right: 20,
               child: Row(
                 crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
+                children: const [
                   Padding(
-                    padding: const EdgeInsets.only(top: 4.0),
+                    padding: EdgeInsets.only(top: 4.0),
                     child: Text(
                       '27',
                       style: TextStyle(

@@ -28,9 +28,7 @@ class AuthFirebaseHelper {
         // ignore: avoid_print
         print('The account already exists for that email.');
       }
-    } catch (e) {
-      print(e);
-    }
+    } catch (e) {}
   }
 
 //SIGNING:

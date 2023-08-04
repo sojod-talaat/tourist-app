@@ -6,16 +6,16 @@ import 'package:flutter/material.dart';
 
 import 'package:geolocator/geolocator.dart';
 import 'package:image_picker/image_picker.dart';
-import 'package:weather_project/data/news_helper.dart';
 
 import 'package:weather_project/firabase/Authhelper.dart';
 import 'package:weather_project/firabase/firestore.dart';
 
-import 'package:weather_project/models/categories.dart';
+import 'package:weather_project/models/places_model.dart';
 import 'package:weather_project/models/daily_weather.dart';
 import 'package:weather_project/models/news_model.dart';
 
 import 'package:weather_project/models/weathermodel.dart';
+import '../Services/news_helper.dart';
 import '../firabase/storage.dart';
 import '../services/weather_helper.dart';
 import '../utils/Approuat.dart';

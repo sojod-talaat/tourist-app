@@ -1,10 +1,8 @@
 // ignore_for_file: deprecated_member_use
 
 import 'package:flutter/material.dart';
-
 import 'package:provider/provider.dart';
 import 'package:weather_project/providers/auth_provider.dart';
-
 import 'package:weather_project/utils/Approuat.dart';
 import 'package:weather_project/utils/colors.dart';
 
@@ -82,16 +80,12 @@ class LoginScreen extends StatelessWidget {
                   alignment: Alignment.centerRight,
                   margin:
                       const EdgeInsets.symmetric(horizontal: 40, vertical: 10),
-                  child: RaisedButton(
-                    onPressed: () {
+                  child: InkWell(
+                    onTap: () {
                       if (value.loginkey.currentState!.validate()) {
                         value.Login(context);
                       }
                     },
-                    shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(80.0)),
-                    textColor: Colors.white,
-                    padding: const EdgeInsets.all(0),
                     child: Container(
                       alignment: Alignment.center,
                       height: 50.0,
@@ -144,7 +138,6 @@ class Background extends StatelessWidget {
     Key? key,
     required this.child,
   }) : super(key: key);
-
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
@@ -165,9 +158,6 @@ class Background extends StatelessWidget {
             right: 0,
             child: Image.asset("assets/images/top2.png", width: size.width),
           ),
-          // Positioned(top: 50, right: 30, child: Icon(Icons.location_on_outlined)
-          //     // Image.asset("assets/images/pic1.jpg", width: size.width * 0.35),
-          //     ),
           Positioned(
             bottom: 0,
             right: 0,

@@ -97,18 +97,14 @@ class SignupScreen extends StatelessWidget {
                     alignment: Alignment.centerRight,
                     margin: const EdgeInsets.symmetric(
                         horizontal: 40, vertical: 10),
-                    child: RaisedButton(
-                      onPressed: () {
+                    child: InkWell(
+                      onTap: () async {
                         if (value.signupkey.currentState!.validate()) {
-                          value.Signup();
+                          await value.Signup();
                           EasyLoading.showSuccess('SignUp Sucsess');
                           Navigator.pushNamed(context, AppRouat.home);
                         }
                       },
-                      shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(80.0)),
-                      textColor: Colors.white,
-                      padding: const EdgeInsets.all(0),
                       child: Container(
                         alignment: Alignment.center,
                         height: 50.0,
